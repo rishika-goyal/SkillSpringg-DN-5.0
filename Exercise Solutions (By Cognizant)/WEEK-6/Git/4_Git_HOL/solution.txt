@@ -1,0 +1,31 @@
+cd ~/Documents/GitDemo
+git status
+git checkout -b GitWork
+git branch
+echo "<message>Hello from GitWork branch</message>" > hello.xml
+cat hello.xml
+git add hello.xml
+git commit -m "Add hello.xml in GitWork"
+git checkout main
+echo "<message>Hello from Main branch</message>" > hello.xml
+cat hello.xml
+git add hello.xml
+git commit -m "Add hello.xml in main"
+git log --oneline --graph --decorate --all
+git log --oneline --graph --decorate --all
+git diff main GitWork
+git merge GitWork
+code .
+git add hello.xml
+git commit -m "Resolve merge conflict"
+git status
+code .gitignore
+git add .gitignore
+git commit -m "Ignore backup files"
+git branch
+git branch -d GitWork
+git log --oneline --graph --decorate
+git push
+history
+
+Rishika goyal@Rishika MINGW64 ~

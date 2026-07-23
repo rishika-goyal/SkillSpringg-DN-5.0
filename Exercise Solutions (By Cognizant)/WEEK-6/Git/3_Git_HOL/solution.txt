@@ -1,0 +1,115 @@
+Rishika goyal@Rishika MINGW64 ~
+$ cd ~/Documents/GitDemo
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+* main
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git branch GitNewBranch
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git branch -a
+  GitNewBranch
+* main
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git branch
+* GitNewBranch
+  main
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ echo "This is my new branch" > branch.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ cat branch.txt
+This is my new branch
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git add branch.txt
+warning: in the working copy of 'GitDemo/branch.txt', LF will be replaced by CRLF the next time Git touches it
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git commit -m "Add branch.txt in GitNewBranch
+> ^C
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$  git commit -m "Add branch.txt in GitNewBranch"
+[GitNewBranch 9624321] Add branch.txt in GitNewBranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 GitDemo/branch.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git status
+warning: could not open directory 'My Music/': Permission denied
+warning: could not open directory 'My Pictures/': Permission denied
+warning: could not open directory 'My Videos/': Permission denied
+On branch GitNewBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        error.log
+        log/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (GitNewBranch)
+$ git checkout main
+Switched to branch 'main'
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git diff main GitNewBranch
+diff --git a/GitDemo/branch.txt b/GitDemo/branch.txt
+new file mode 100644
+index 0000000..388da8a
+--- /dev/null
++++ b/GitDemo/branch.txt
+@@ -0,0 +1 @@
++This is my new branch
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git diff master GitNewBranch
+fatal: ambiguous argument 'master': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git merge GitNewBranch
+Updating 6821f84..9624321
+Fast-forward
+ GitDemo/branch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 GitDemo/branch.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git log --oneline --graph --decorate
+* 9624321 (HEAD -> main, GitNewBranch) Add branch.txt in GitNewBranch
+* 6821f84 Add gitignore
+* a744678 Create file with Welcome text
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git branch -d GitNewBranch
+Deleted branch GitNewBranch (was 9624321).
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git branch
+* main
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git status
+warning: could not open directory 'My Music/': Permission denied
+warning: could not open directory 'My Pictures/': Permission denied
+warning: could not open directory 'My Videos/': Permission denied
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        error.log
+        log/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rishika goyal@Rishika MINGW64 ~/Documents/GitDemo (main)
+$ git push

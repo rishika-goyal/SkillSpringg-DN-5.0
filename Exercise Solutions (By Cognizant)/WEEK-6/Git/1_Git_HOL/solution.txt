@@ -1,0 +1,54 @@
+Rishika goyal@Rishika MINGW64 ~
+$ cd Documents
+
+Rishika goyal@Rishika MINGW64 ~/Documents
+$ mkdir GitDemo
+
+Rishika goyal@Rishika MINGW64 ~/Documents
+$ git init
+Initialized empty Git repository in C:/Users/Rishika goyal/Documents/.git/
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ code .
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ touch welcome.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ echo "Welcome to Git" > welcome.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git add welcome.txt
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git commit -m "Create file with Welcome text"
+[master (root-commit) a744678] Create file with Welcome text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git status
+warning: could not open directory 'My Music/': Permission denied
+warning: could not open directory 'My Pictures/': Permission denied
+warning: could not open directory 'My Videos/': Permission denied
+On branch master
+nothing to commit, working tree clean
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ https://github.com/rishika-goyal/GitDemp.git
+bash: https://github.com/rishika-goyal/GitDemp.git: No such file or directory
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git remote add origin https://github.com/GitDemo.git
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git remote -v
+origin  https://github.com/GitDemo.git (fetch)
+origin  https://github.com/GitDemo.git (push)
+
+Rishika goyal@Rishika MINGW64 ~/Documents (master)
+$ git branch -M main
+
+Rishika goyal@Rishika MINGW64 ~/Documents (main)
+$ git push -u origin main
