@@ -1,0 +1,75 @@
+body{
+
+    margin:0;
+
+    background:#f5f5f5;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.App{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+table{
+
+    margin:auto;
+
+    border-collapse:collapse;
+
+    width:80%;
+
+    background:white;
+
+}
+
+table,th,td{
+
+    border:1px solid gray;
+
+}
+
+th{
+
+    background:#1f3d8f;
+
+    color:white;
+
+    padding:10px;
+
+}
+
+td{
+
+    padding:10px;
+
+}
+
+button{
+
+    padding:12px 24px;
+
+    background:#1f3d8f;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+button:hover{
+
+    background:#345dc1;
+
+}
